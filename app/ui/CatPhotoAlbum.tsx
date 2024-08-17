@@ -3,7 +3,7 @@ import { CatPhoto } from "./CatPhoto";
 import styles from "./CatPhotoAlbum.module.scss";
 const CatPhotoAlbum = async () => {
     const catData = await fetchData();
-    let imageCollection: Array<JSX.Element> = [];
+    const imageCollection: Array<JSX.Element> = [];
     for (const data of catData) {
         imageCollection.push(<CatPhoto url={data.url} />)
     }
