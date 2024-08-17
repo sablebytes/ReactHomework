@@ -1,14 +1,16 @@
-import { fetchData, CatPhoto } from "../lib/fetchData"
+import { fetchData } from "../lib/fetchData";
+import { CatPhoto } from "./CatPhoto";
+import styles from "./CatPhotoAlbum.module.scss";
 const CatPhotoAlbum = async () => {
     const catData = await fetchData();
-    let imageCollection : Array<JSX.Element> = [];
-    for (const catPhoto of catData){
-        imageCollection.push(<img src={catPhoto.url}/>)
+    let imageCollection: Array<JSX.Element> = [];
+    for (const data of catData) {
+        imageCollection.push(<CatPhoto url={data.url} />)
     }
     return (
-        <p>
+        <div className={styles.container}>
             {imageCollection}
-        </p>
+        </div>
     )
 }
 

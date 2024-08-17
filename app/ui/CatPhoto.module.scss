@@ -1,0 +1,11 @@
+.catImage {
+    max-height: 300px;
+}
+
+.catBox {
+    display: flex;
+    flex-direction: column;
+    background-color: blueviolet;
+    padding: 5px;
+    border-radius: 10px;
+}
