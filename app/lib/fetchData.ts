@@ -1,4 +1,4 @@
-export interface CatPhotoData {
+interface CatPhotoData {
     id: string;
     url: string;
     width: number;
