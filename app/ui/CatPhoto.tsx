@@ -13,7 +13,7 @@ export const CatPhoto = (props: CatPhotoProps) => {
     } else {
         return (
         <div className={styles.catBox}>
-            <img className={styles.catImage} src={props.url} />
+            <img className={styles.catImage} src={props.url} alt="A photo of a cat"/>
             <button onClick={() => setRemoved(true)}>Remove</button>
         </div>
         )
